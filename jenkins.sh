@@ -9,5 +9,5 @@ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 yum install java-21-amazon-corretto -y
 yum install jenkins -y
 
-systemctl start jenkins.service
-systemctl status jenkins.service
+systemctl start jenkins
+systemctl status jenkins
