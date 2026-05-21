@@ -1,4 +1,4 @@
-amazon-linux-extras install java-openjdk11 -y
+dnf install java-17-amazon-corretto -y
 wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.118/bin/apache-tomcat-9.0.118.tar.gz
 tar -zxvf apache-tomcat-9.0.118.tar.gz
 sed -i '56  a\<role rolename="manager-gui"/>' apache-tomcat-9.0.118/conf/tomcat-users.xml
@@ -8,4 +8,4 @@ sed -i '59  a\</tomcat-users>' apache-tomcat-9.0.118/conf/tomcat-users.xml
 sed -i '56d' apache-tomcat-9.0.118/conf/tomcat-users.xml
 sed -i '21d' apache-tomcat-9.0.118/webapps/manager/META-INF/context.xml
 sed -i '22d'  apache-tomcat-9.0.118/webapps/manager/META-INF/context.xml
-sh apache-tomcat-9.0.118/bin/startup.sh  
+sh apache-tomcat-9.0.118/bin/startup.sh
