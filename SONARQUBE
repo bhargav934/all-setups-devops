@@ -1,0 +1,27 @@
+sudo dnf update -y
+
+sudo dnf install java-21-amazon-corretto -y
+
+java -version
+
+sudo useradd sonar
+
+cd /opt
+
+sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-26.5.0.122743.zip
+
+sudo dnf install unzip -y
+
+sudo unzip sonarqube-26.5.0.122743.zip
+
+sudo mv sonarqube-26.5.0.122743 sonarqube
+
+sudo chown -R sonar /opt/sonarqube
+
+sudo su - sonar
+
+cd /opt/sonarqube/bin/linux-x86-64
+
+./sonar.sh start
+
+./sonar.sh status
